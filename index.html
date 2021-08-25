@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animetrix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class='pad'>
+        <h1>Your Anime List</h1>
+    </header>
+
+    <div class="text-center">
+        <button class="btn-orange pad mar text-size-big" id="open-modal">Add new anime</button>
+    </div>
+    
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="pad mar">
+                <label for="">Title</label>
+                <input type="text" id="title" class="input" required>
+
+                <label for="">Studio</label>
+                <input type="text" id="studio" class="input" required>
+
+                <label for="">Release year</label>
+                <input type="number" id="release" class="input" required>
+                <div class="input">
+                    <label for="watched">Watched</label>
+                    <input type="checkbox" name="watched" id="watched">
+                </div>
+                <button class="btn-orange pad" id="add">Add</button>
+                <button class="btn-blue pad" id="close-modal">Close</button>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div id="list" class="row text-size-big">
+
+    </div>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>

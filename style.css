@@ -1,0 +1,142 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+:root{
+    --dark-blue: #00303b ;
+    --orange-pink: #ff7777 ;
+    --smooth-yellow: #ffce96 ;
+    --smooth-white: #f1f2da ;
+}
+
+html{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--dark-blue);
+    font-size: 14px;
+}
+
+header{
+    background-color: var(--smooth-white);
+    color: var(--dark-blue);
+}
+
+.pad{
+    padding: 5px;
+}
+
+.mar{
+    margin: 5px;
+}
+
+.btn-orange{
+    background-color: var(--smooth-yellow);
+    color: var(--dark-blue);
+    border: 3px solid var(--orange-pink);
+}
+
+.btn-blue{
+    background-color: var(--dark-blue);
+    color: var(--smooth-white);
+    border: 3px solid var(--smooth-yellow);
+}
+
+.card{
+    border: 3px solid var(--orange-pink);
+    border-radius: 3px;
+    background-color: var(--smooth-white);
+}
+.card *{
+    margin: 1vh 4px;
+}
+
+.input{
+    width: 100%;
+    display: block;
+    padding: 4px;
+    margin: 5px 2px;
+    font-size: 20px;
+}
+
+/*text styling*/
+.text-size-big{
+    font-size: 1.5rem;
+}
+.text-size-medium{
+    font-size: 1rem;
+}
+.text-size-small{
+    font-size: 0.9rem;
+}
+.text-center{
+    text-align: center;
+}
+
+
+/*float*/
+.row{
+    margin-top: 5px;
+}
+.row::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+.col-a-third{
+    float: left;
+    width: 46%;
+    margin: 2%;
+}
+/*end float*/
+
+.modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: var(--smooth-white);
+    margin: auto;
+    padding: 0;
+    border: 5px solid var(--dark-blue);
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.2s;
+    animation-name: animatetop;
+    animation-duration: 0.2s
+  }
+
+  /* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@media (min-width: 720px){
+    html{
+        font-size: 18px;
+    }
+    .col-a-third{
+        float: left;
+        width: 30%;
+        margin: 1.5%;
+    }
+}
